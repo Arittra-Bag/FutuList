@@ -1,0 +1,141 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0e0e0e; /* Dark background with a futuristic vibe */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #66d9ef; /* A futuristic blue color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff; /* Change color to white on hover */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-weight: bold;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  margin-bottom: 2rem; /* Increase gap between title and content */
+  color: #ffffff; 
+  text-shadow: 0 0 5px #a7d8ff, 0 0 10px #a7d8ff, 0 0 15px #a7d8ff, 0 0 20px #a7d8ff; /* Add subtle glowing effect */
+  animation: titleGlow 2s linear infinite; /* Animate the glowing effect */
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #a7d8ff, 0 0 10px #a7d8ff, 0 0 15px #a7d8ff, 0 0 20px #a7d8ff; /* Initial glowing effect */
+  }
+  50% {
+    text-shadow: none; /* Halfway through the animation, remove the glowing effect */
+  }
+}
+
+/* Styling for department list */
+.table-container {
+  background-color: #121212; /* Dark gray background for the department list */
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Add a smooth transition on hover */
+  display: flex; /* Use flexbox to center the contents */
+  flex-direction: column; /* Stack contents vertically */
+  justify-content: center; /* Center contents vertically */
+  align-items: center; /* Center contents horizontally */
+  animation: fadeInUp 0.5s ease;
+}
+
+.table-container:hover {
+  box-shadow: 0 4px 8px rgb(0, 21, 255); /* Add a subtle shadow effect on hover */
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+th {
+  background-color: #1f1f1f; /* Darker gray background for table header */
+  color: #66d9ef; /* Blue color for table header text */
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+}
+
+/* Styling for department links */
+.department-link {
+  color: #66d9ef; /* Futuristic blue color for department links */
+  transition: color 0.3s ease;
+}
+
+.department-link:hover {
+  color: #fff; /* Change color to white on hover */
+}
+
+/* Keyframe animation for fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  position: relative; /* Set the body as relative for absolute positioning of pseudo-elements */
+  overflow: hidden; /* Hide any overflowing elements to prevent scrollbar */
+}
+
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 25px; /* Adjust the height as needed */
+  background-image: radial-gradient(circle, #ff0080, #66d9ef); /* Futuristic gradient */
+  z-index: -1; /* Place the pseudo-elements behind other content */
+  animation: burningFlame 1s linear infinite;
+}
+
+body::before {
+  top: -10px; /* Adjust the position as needed for top border */
+}
+
+body::after {
+  bottom: -10px; /* Adjust the position as needed for bottom border */
+}
+
+@keyframes burningFlame {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.9) translateY(-5px);
+    opacity: 1;
+  }
+}
